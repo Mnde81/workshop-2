@@ -20,13 +20,14 @@ searchInput.addEventListener('keyup', search);
 
 function search() {
     const searchInputValue = searchInput.value;
-    const listElements = document.getElementsByTagName('li');
+    const listElements = document.getElementsByTagName("li");
 
     for (let i = 0; i < listElements.length; i++) {
-        if (listElements[i].innerHTML.toLowerCase().includes(searchInputValue) || listElements[i].innerHTML.toUpperCase().includes(searchInputValue)) {
+        if (listElements[i].innerHTML.toLowerCase().includes(searchInputValue) ||
+         listElements[i].innerHTML.toUpperCase().includes(searchInputValue)) {
             listElements[i].style.display = "";
         } else {
-            listElements[i].style.display = none;
+            listElements[i].style.display = "none";
         }
     }
 };
